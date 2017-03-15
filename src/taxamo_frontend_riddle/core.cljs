@@ -59,7 +59,7 @@
    [:p "In this div, there is an email address hidden somewhere. Please adjust the code, so you can send your resume."]
    (doall
      (for [g [gs1 gs2 gs3]]
-       [:div.row
+       [:div.row {:key (str g)}
         [:div.col-lg-12]
         [:div.col-lg-1.col-sm-offset-12[:div.hidden-xs [:div.visible-xs (apply g [])]]]]))])
 
